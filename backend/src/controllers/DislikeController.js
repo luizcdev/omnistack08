@@ -4,6 +4,9 @@ module.exports = {
                
         const {devId} = req.params;
         const {user} = req.headers;
+        
+        console.log('devId: '+ devId);
+        console.log('user:  '+ user);
 
         const loggedDev = await Dev.findById(user);
         const targetDev = await Dev.findById(devId);
